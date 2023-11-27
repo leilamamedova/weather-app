@@ -1,8 +1,13 @@
 {
-  "routes": [
+  "functions": {
+    "api/index.mjs": {
+      "runtime": "vercel-node@experimental"
+    }
+  },
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "app.js"
+      "source": "/(.*)",
+      "destination": "/api/index.mjs"
     }
   ]
 }
