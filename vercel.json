@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/weather", "dest": "/api/weather" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
