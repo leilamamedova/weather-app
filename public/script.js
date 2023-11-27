@@ -1,4 +1,4 @@
-const weatherApi = "/weather";
+const weatherApi = "/api/weather";
 
 const weatherForm = $("form");
 const search = $("input");

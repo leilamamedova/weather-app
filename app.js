@@ -1,15 +1,13 @@
 import express from "express";
 import axios from "axios";
-import cors from "cors";
 
 const app = express();
-app.use(cors());
 app.use(express.static("public"));
 
 const PORT = 3000;
 const apiKey = "544656840a9bc3d255379dfa65ead4cb";
 
-app.get("/weather", async (req, res) => {
+app.get("/api/weather", async (req, res) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${req.query.address}&units=metric&appid=${apiKey}`;
 
   try {
