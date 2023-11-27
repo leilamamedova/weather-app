@@ -25,7 +25,9 @@ weatherForm.submit((e) => {
 
 const getWeatherData = async (city) => {
   try {
-    const response = await fetch(`${weatherApi}?address=${city}`);
+    const response = await fetch(
+      `${window.location.origin}${weatherApi}?address=${city}`
+    );
     const result = await response.json();
 
     if (result.cod == 200) {
