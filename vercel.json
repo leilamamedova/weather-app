@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/weather", "destination": "/api/weather" },
-    { "source": "/(.*)", "destination": "/$1" }
-  ]
-}
