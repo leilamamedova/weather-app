@@ -8,8 +8,7 @@ const PORT = 3000;
 const apiKey = "544656840a9bc3d255379dfa65ead4cb";
 
 app.get("/weather", async (req, res) => {
-  const address = encodeURIComponent(req.query.address);
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${address}&units=metric&appid=${apiKey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${req.query.address}&units=metric&appid=${apiKey}`;
 
   try {
     const response = await axios.get(url);
