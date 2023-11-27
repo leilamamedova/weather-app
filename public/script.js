@@ -25,9 +25,7 @@ weatherForm.submit((e) => {
 
 const getWeatherData = async (city) => {
   try {
-    const response = await fetch(
-      `https://weather-app-leila.vercel.app${weatherApi}?address=${city}`
-    );
+    const response = await fetch(`${weatherApi}?address=${city}`);
     const result = await response.json();
 
     if (result.cod == 200) {
